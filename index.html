@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>AURA Crystal | Next Generation Energy</title>
+  <meta name="description"
+    content="Experience the next evolution of energy. Zero sugar, infinite power. Premium bio-optimized performance fuel.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="sections.css">
+  <link rel="stylesheet" href="components.css">
+</head>
+
+<body>
+  <!-- ============ LOADER ============ -->
+  <div id="loader" class="loader">
+    <div class="loader-bg"></div>
+    <div class="loader-content">
+      <div class="loader-circle-system">
+        <div class="circle c1"></div>
+        <div class="circle c2"></div>
+        <div class="circle c3"></div>
+        <div class="loader-logo-container">
+          <img src="https://i.pinimg.com/1200x/71/56/aa/7156aae55fcf720b70e2da274911c618.jpg" class="loader-brand-logo"
+            alt="Aura Logo">
+          <div class="logo-glow"></div>
+        </div>
+      </div>
+      <div class="loader-status">
+        <div class="status-header">
+          <span class="status-text">INITIALIZING SYSTEM</span>
+          <span class="status-dots">...</span>
+        </div>
+        <div class="loader-bar-wrapper">
+          <div class="loader-bar">
+            <div class="loader-progress" id="loaderProgress"></div>
+          </div>
+          <div class="loader-bar-glow"></div>
+        </div>
+        <div class="loader-meta">
+          <span class="meta-item">V.2.0.26</span>
+          <span class="meta-item">AURA.OS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <img src="https://i.pinimg.com/1200x/71/56/aa/7156aae55fcf720b70e2da274911c618.jpg" class="nav-brand-logo"
+          alt="Aura Logo">
+        <span>AURA</span>
+      </a>
+
+      <div class="nav-menu" id="navMenu">
+        <a href="#hero" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#merch" class="nav-link">Merch</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="nav-btn search-btn" id="searchBtn" aria-label="Search">
+          <i data-lucide="search"></i>
+        </button>
+        <button class="nav-btn cart-btn" id="cartBtn" aria-label="Cart">
+          <i data-lucide="shopping-bag"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+        <button class="btn-god nav-cta" id="shopNowBtn">Shop Now</button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ MOBILE MENU ============ -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-content">
+      <a href="#hero" class="mobile-link">Home</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#products" class="mobile-link">Products</a>
+      <a href="#merch" class="mobile-link">Merch</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+      <button class="btn-god mobile-cta" id="mobileShopBtn">Shop Now</button>
+    </div>
+  </div>
+
+  <!-- ============ PROGRESS BAR ============ -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="glow-orb orb-1"></div>
+      <div class="glow-orb orb-2"></div>
+      <div class="grid-pattern"></div>
+    </div>
+
+    <div class="floating-elements">
+      <div class="float-ring ring-1"></div>
+      <div class="float-ring ring-2"></div>
+      <div class="float-square"></div>
+    </div>
+
+    <!-- Hero Product Image -->
+    <div class="hero-image-container fade-in" data-delay="2">
+      <img src="https://i.pinimg.com/1200x/a3/cf/b5/a3cfb5a1adf671b237f38f8750d0748d.jpg"
+        alt="AURA Crystal Energy Drink" class="hero-product-image">
+      <div class="hero-image-glow"></div>
+    </div>
+
+    <div class="hero-left fade-in" data-delay="2">
+      <img src="https://i.pinimg.com/1200x/09/9d/3b/099d3b53084d904d3550aa154e591d66.jpg"
+        alt="AURA Crystal Energy Drink" class="hero-product-image">
+      <div class="hero-image-glow"></div>
+    </div>
+
+    <div class="hero-left1 fade-in" data-delay="2">
+      <img src="https://i.pinimg.com/736x/4e/91/db/4e91db14fd904a24f43feeabbb2844c7.jpg" alt="AURA Crystal Energy Drink"
+        class="hero-product-image">
+      <div class="hero-image-glow"></div>
+    </div>
+
+    <div class="hero-right1 fade-in" data-delay="2">
+      <img src="https://i.pinimg.com/736x/99/a6/39/99a6395865b9e9f52afe9f4f2518af49.jpg" alt="AURA Crystal Energy Drink"
+        class="hero-product-image">
+      <div class="hero-image-glow"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-tag fade-in">
+        <span class="line"></span>
+        <span class="text">Next Generation Energy</span>
+        <span class="line"></span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="title-line slide-up" data-delay="1">AURA</span>
+        <span class="title-line slide-up" data-delay="1">CRYSTAL</span>
+      </h1>
+
+      <div class="hero-slogan fade-in" data-delay="2">
+        <span class="slogan-highlight">ZERO SUGAR.</span>
+        <span class="slogan-divider">|</span>
+        <span class="slogan-text">INFINITE POWER.</span>
+      </div>
+
+      <p class="hero-description fade-in" data-delay="3">
+        Unlock your potential with the world's most advanced
+        <strong>bio-optimized</strong> energy formula.
+      </p>
+
+      <div class="hero-buttons fade-in" data-delay="4">
+        <button class="btn-god" id="exploreBtn">
+          <span>Explore Collection</span>
+          <i data-lucide="arrow-right"></i>
+        </button>
+        <button class="btn-secondary" id="watchBtn">
+          <i data-lucide="play"></i>
+          <span>Watch Story</span>
+        </button>
+      </div>
+
+      <div class="hero-stats fade-in" data-delay="5">
+        <div class="stat-item">
+          <span class="stat-value">15+</span>
+          <span class="stat-label">Premium Flavors</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">0g</span>
+          <span class="stat-label">Sugar Content</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">100%</span>
+          <span class="stat-label">Natural Energy</span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="side-text left">Aura Crystal Beverages © 2026</div>
+    <div class="side-text right">Premium Energy Formula</div>
+  </section>
+
+  <!-- ============ ABOUT SECTION ============ -->
+  <section class="about" id="about">
+    <div class="section-bg">
+      <div class="glow-orb orb-left"></div>
+      <div class="glow-orb orb-right"></div>
+    </div>
+
+    <div class="container">
+      <div class="section-header slide-in-left">
+        <span class="section-tag">The Science Behind</span>
+        <h2 class="section-title">
+          ENGINEERED
+          <br>
+          <span class="gradient-text">FOR GODS</span>
+        </h2>
+        <p class="section-description">
+          Aura Crystal isn't just another energy drink. It's a
+          <strong>bio-optimized performance fuel</strong>
+          meticulously crafted to unlock your cognitive potential.
+        </p>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card glass-card" data-aos="fade-up" data-aos-delay="0">
+          <span class="stat-number">0%</span>
+          <span class="stat-name">Sugar</span>
+        </div>
+        <div class="stat-card glass-card" data-aos="fade-up" data-aos-delay="100">
+          <span class="stat-number">100%</span>
+          <span class="stat-name">Energy</span>
+        </div>
+        <div class="stat-card glass-card" data-aos="fade-up" data-aos-delay="200">
+          <span class="stat-number">B12</span>
+          <span class="stat-name">Infused</span>
+        </div>
+        <div class="stat-card glass-card" data-aos="fade-up" data-aos-delay="300">
+          <span class="stat-number">15</span>
+          <span class="stat-name">Flavors</span>
+        </div>
+      </div>
+
+      <div class="bento-grid">
+        <div class="bento-panel ingredients-panel glass-panel" data-aos="fade-right">
+          <h3 class="panel-title">
+            <span class="icon"><i data-lucide="zap"></i></span>
+            Power Ingredients
+          </h3>
+          <div class="ingredients-list">
+            <div class="ingredient-item" data-ingredient="0">
+              <div class="ingredient-info">
+                <h4>Vitamin B12</h4>
+                <p>Enhanced cognitive function</p>
+              </div>
+              <span class="ingredient-dot"></span>
+            </div>
+            <div class="ingredient-item" data-ingredient="1">
+              <div class="ingredient-info">
+                <h4>Natural Caffeine</h4>
+                <p>Sustained energy release</p>
+              </div>
+              <span class="ingredient-dot"></span>
+            </div>
+            <div class="ingredient-item" data-ingredient="2">
+              <div class="ingredient-info">
+                <h4>Electrolytes</h4>
+                <p>Optimal hydration</p>
+              </div>
+              <span class="ingredient-dot"></span>
+            </div>
+            <div class="ingredient-item" data-ingredient="3">
+              <div class="ingredient-info">
+                <h4>Zero Sugar</h4>
+                <p>Clean energy, no crash</p>
+              </div>
+              <span class="ingredient-dot"></span>
+            </div>
+            <div class="ingredient-item" data-ingredient="4">
+              <div class="ingredient-info">
+                <h4>Taurine</h4>
+                <p>Mental performance boost</p>
+              </div>
+              <span class="ingredient-dot"></span>
+            </div>
+            <div class="ingredient-item" data-ingredient="5">
+              <div class="ingredient-info">
+                <h4>Antioxidants</h4>
+                <p>Cellular protection</p>
+              </div>
+              <span class="ingredient-dot"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bento-features">
+          <div class="feature-card glass-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-glow cyan"></div>
+            <div class="feature-icon"><i data-lucide="rocket"></i></div>
+            <h4>Zero Crash</h4>
+            <p>Sustained energy release without the jitters or afternoon slump.</p>
+          </div>
+          <div class="feature-card glass-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-glow purple"></div>
+            <div class="feature-icon"><i data-lucide="brain"></i></div>
+            <h4>Brain Fuel</h4>
+            <p>Nootropic-enhanced formulas sharpen your focus and cognition.</p>
+          </div>
+          <div class="feature-card hero-card glass-card" data-aos="fade-up" data-aos-delay="300"
+            style="background-image: url('https://i.pinimg.com/1200x/80/95/47/80954754fa260e3eb16aea1e00538429.jpg');">
+            <div class="hero-card-overlay"></div>
+            <div class="hero-card-badge">Premium Formula</div>
+            <div class="hero-card-content">
+              <h3>INFINITE FLOW.<br><span class="gradient-text">ZERO LIMITS.</span></h3>
+              <a href="#products" class="link-arrow">
+                Discover the Science
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trust-badges" data-aos="fade-up">
+        <div class="badge"><i data-lucide="shield-check"></i>FDA Approved</div>
+        <div class="badge"><i data-lucide="flask-conical"></i>Lab Tested</div>
+        <div class="badge"><i data-lucide="leaf"></i>Vegan Friendly</div>
+        <div class="badge"><i data-lucide="candy-off"></i>Sugar Free</div>
+        <div class="badge"><i data-lucide="coffee"></i>Natural Caffeine</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCTS SECTION ============ -->
+  <section class="products" id="products">
+    <div class="section-bg dark">
+      <div class="grid-pattern"></div>
+      <div class="glow-orb orb-left purple"></div>
+      <div class="glow-orb orb-right cyan"></div>
+    </div>
+
+    <div class="container">
+      <div class="section-header center" data-aos="fade-up">
+        <span class="section-tag">Premium Selection</span>
+        <h2 class="section-title mega">COLLECTION</h2>
+        <p class="section-description">
+          Choose your frequency. Each flavor engineered for a unique energy experience.
+        </p>
+      </div>
+
+      <div class="filter-tabs" data-aos="fade-up" data-aos-delay="100">
+        <button class="filter-btn active" data-filter="all">All Flavors</button>
+        <button class="filter-btn" data-filter="featured">Featured</button>
+        <button class="filter-btn" data-filter="classic">Classic</button>
+        <button class="filter-btn" data-filter="premium">Premium</button>
+      </div>
+
+      <div class="products-grid" id="productsGrid"></div>
+
+      <div class="products-cta" data-aos="fade-up">
+        <button class="btn-god" id="viewCatalogBtn">
+          <span>View Full Catalog</span>
+          <i data-lucide="chevron-down"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEW ARRIVALS SECTION ============ -->
+  <section class="new-arrivals" id="new-arrivals">
+    <div class="section-bg dark">
+      <div class="glow-orb orb-left purple"></div>
+      <div class="grid-pattern"></div>
+    </div>
+    <div class="container">
+      <div class="section-header center" data-aos="fade-up">
+        <span class="section-tag">LIMITED DROPS</span>
+        <h2 class="section-title">NEW ARRIVALS</h2>
+      </div>
+
+      <div class="new-arrivals-grid">
+        <!-- Card 1 -->
+        <div class="new-arrival-card" data-aos="fade-right">
+          <div class="arrival-visual">
+            <img src="https://i.pinimg.com/736x/6a/ec/90/6aec9085a07de122313662daa0525c39.jpg" alt="Neon Flavor">
+            <div class="arrival-glow neon"></div>
+          </div>
+          <div class="arrival-content">
+            <span class="arrival-badge">JUST DROPPED</span>
+            <h3>NEON VOLT</h3>
+            <p>Electric Raspberry x Yuzu. The taste of the future.</p>
+            <div class="arrival-price">
+              <span class="old-price">$45.00</span>
+              <span class="new-price">$38.00</span>
+            </div>
+            <button class="btn-god small mt-4" onclick="addToCart(101)">SECURE DROP</button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="new-arrival-card" data-aos="fade-left">
+          <div class="arrival-visual">
+            <img src="https://i.pinimg.com/1200x/6b/f4/ff/6bf4ffb82626e997acc23e6446df7393.jpg" alt="Cyber Flavor">
+            <div class="arrival-glow cyber"></div>
+          </div>
+          <div class="arrival-content">
+            <span class="arrival-badge">LIMITED EDITION</span>
+            <h3>CYBER PUNCH</h3>
+            <p>Dragonfruit x Neural Link. High voltage hydration.</p>
+            <div class="arrival-price">
+              <span class="old-price">$45.00</span>
+              <span class="new-price">$38.00</span>
+            </div>
+            <button class="btn-god small mt-4" onclick="addToCart(102)">SECURE DROP</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BUNDLE PACKETS SECTION ============ -->
+  <section class="bundles" id="bundles">
+    <div class="section-bg gradient">
+      <div class="glow-orb orb-right cyan"></div>
+    </div>
+    <div class="container">
+      <div class="section-header center" data-aos="fade-up">
+        <span class="section-tag">MAXIMUM VALUE</span>
+        <h2 class="section-title">ELITE BUNDLES</h2>
+        <p class="section-description">EQUIP YOUR SQUAD. DOMINATE THE LOBBY.</p>
+      </div>
+
+      <div class="bundles-grid">
+        <!-- Bundle 1 -->
+        <div class="bundle-card" data-aos="fade-up">
+          <div class="bundle-glow gold"></div>
+          <div class="bundle-header">
+            <div class="bundle-icon"><i data-lucide="zap"></i></div>
+            <h3>HYPER-FOCUS PACK</h3>
+            <span class="bundle-tier">GOLD TIER</span>
+          </div>
+          <div class="bundle-visual">
+            <img src="https://i.pinimg.com/736x/93/90/a1/9390a1854313724351f40507dccfee19.jpg" alt="Hyper Focus Bundle">
+          </div>
+          <ul class="bundle-features">
+            <li><i data-lucide="check"></i> 24x Neon Volt Cans</li>
+            <li><i data-lucide="check"></i> 1x Aura Shaker Bottle</li>
+            <li><i data-lucide="check"></i> Exclusive Sticker Pack</li>
+          </ul>
+          <div class="bundle-footer">
+            <div class="bundle-price">
+              <span class="bundle-old">$120.00</span>
+              <span class="bundle-new">$89.99</span>
+            </div>
+            <button class="btn-god full-width" onclick="addToCart(103)">ADD TO CART</button>
+          </div>
+        </div>
+
+        <!-- Bundle 2 -->
+        <div class="bundle-card premium" data-aos="fade-up" data-aos-delay="100">
+          <div class="bundle-glow platinum"></div>
+          <span class="best-value-badge">BEST VALUE</span>
+          <div class="bundle-header">
+            <div class="bundle-icon"><i data-lucide="crown"></i></div>
+            <h3>STREAMER LEGEND KIT</h3>
+            <span class="bundle-tier">PLATINUM TIER</span>
+          </div>
+          <div class="bundle-visual">
+            <img src="https://i.pinimg.com/1200x/27/30/e8/2730e8b4071a8ee4d700b719e22e3924.jpg" alt="Streamer Bundle">
+          </div>
+          <ul class="bundle-features">
+            <li><i data-lucide="check"></i> 48x Mixed Flavor Cans</li>
+            <li><i data-lucide="check"></i> 1x LED Mini-Fridge</li>
+            <li><i data-lucide="check"></i> VIP Discord Role</li>
+            <li><i data-lucide="check"></i> Early Access Drops</li>
+          </ul>
+          <div class="bundle-footer">
+            <div class="bundle-price">
+              <span class="bundle-old">$350.00</span>
+              <span class="bundle-new">$249.99</span>
+            </div>
+            <button class="btn-god full-width" onclick="addToCart(104)">ADD TO CART</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MERCH SPECIAL SECTION ============ -->
+  <section class="merch" id="merch">
+    <div class="section-bg dark">
+      <div class="grid-pattern opacity-low"></div>
+    </div>
+    <div class="container">
+      <div class="merch-layout">
+        <div class="merch-info" data-aos="fade-right">
+          <span class="section-tag">AURA GEAR</span>
+          <h2 class="section-title">OFFICIAL<br>MERCH DROP</h2>
+          <p class="section-description">Wear the energy. Limited run apparel designed for the cyber-elite.</p>
+          <button class="btn-god mt-4" onclick="showToast('LOOKBOOK INITIALIZING...', 'info')">VIEW LOOKBOOK</button>
+        </div>
+
+        <div class="merch-grid">
+          <div class="merch-item tall" data-aos="zoom-in" onclick="openCollectionModal('hoodie')">
+            <img src="https://i.pinimg.com/1200x/34/b5/d5/34b5d5260c9992ee7af71201fd4159f0.jpg" alt="Hoodie">
+            <!-- Using existing as placeholder, ideally separate image -->
+            <div class="merch-overlay">
+              <span>CYBER HOODIE</span>
+              <strong>$65.00</strong>
+            </div>
+            <span class="sold-out-badge">ALMOST GONE</span>
+          </div>
+          <div class="merch-item tall" data-aos="zoom-in" data-aos-delay="100" onclick="openCollectionModal('cap')">
+            <img src="https://i.pinimg.com/736x/f4/37/96/f43796c5731b3898681c36c73b9fabf9.jpg" alt="Cap">
+            <div class="merch-overlay">
+              <span>TACTICAL CAP</span>
+              <strong>$35.00</strong>
+            </div>
+          </div>
+          <div class="merch-item tall" data-aos="zoom-in" data-aos-delay="200" onclick="openCollectionModal('tee')">
+            <img src="https://i.pinimg.com/736x/a1/84/3c/a1843ca24d01adf2a5594f9939af86e8.jpg" alt="Tee">
+            <div class="merch-overlay">
+              <span>NEON TEE</span>
+              <strong>$40.00</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AURA LIVE (BLOG) SECTION ============ -->
+  <section class="aura-live" id="aura-live">
+    <div class="section-bg">
+      <div class="grid-pattern"></div>
+      <div class="glow-orb orb-center cyan"></div>
+    </div>
+
+    <div class="container">
+      <div class="section-header center" data-aos="fade-up">
+        <span class="section-tag">LATEST TRANSMISSIONS</span>
+        <h2 class="section-title mega">AURA LIVE</h2>
+        <p class="section-description">
+          INSIDE THE SOURCE. UPDATES, EVENTS, AND CAPITAL PRODUCT INTEL.
+        </p>
+      </div>
+
+      <!-- 9:16 Scrolling Container -->
+      <div class="live-scroll-container horizontal-scroll snap-mandatory" data-aos="fade-up" data-delay="100">
+        <!-- Live Card 1 -->
+        <article class="live-card" onclick="openLiveModal('launch')">
+          <div class="card-image">
+            <img src="https://i.pinimg.com/1200x/b0/d5/f8/b0d5f8c526c067fbaabd39b328cc313c.jpg" alt="Launch Event">
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-content">
+            <span class="card-date">26.10.2026</span>
+            <h3 class="card-title">GENESIS LAUNCH</h3>
+            <span class="card-action">CLICK FOR INTEL <i data-lucide="arrow-up-right"></i></span>
+          </div>
+        </article>
+
+        <!-- Live Card 2 -->
+        <article class="live-card" onclick="openLiveModal('neon')">
+          <div class="card-image">
+            <img src="https://i.pinimg.com/1200x/11/3f/15/113f151c6dbdc4ce4996ae802d1cf29b.jpg" alt="Neon Series">
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-content">
+            <span class="card-date">15.11.2026</span>
+            <h3 class="card-title">NEON NIGHTS</h3>
+            <span class="card-action">CLICK FOR INTEL <i data-lucide="arrow-up-right"></i></span>
+          </div>
+        </article>
+
+        <!-- Live Card 3 -->
+        <article class="live-card" onclick="openLiveModal('cyber')">
+          <div class="card-image">
+            <img src="https://i.pinimg.com/736x/c8/e5/12/c8e51292274b4b2a94acf1839b159c98.jpg" alt="Cyber Edition">
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-content">
+            <span class="card-date">01.12.2026</span>
+            <h3 class="card-title">CYBER EDITION</h3>
+            <span class="card-action">CLICK FOR INTEL <i data-lucide="arrow-up-right"></i></span>
+          </div>
+        </article>
+
+        <!-- Live Card 4 -->
+        <article class="live-card" onclick="openLiveModal('community')">
+          <div class="card-image">
+            <!-- Placeholder fallback, will look for better one or assume stylings handle missing -->
+            <img src="https://i.pinimg.com/736x/7f/9a/79/7f9a79d1d95e083409fbb494d88cc88b.jpg" alt="Community">
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-content">
+            <span class="card-date">10.12.2026</span>
+            <h3 class="card-title">ELITE SQUAD</h3>
+            <span class="card-action">CLICK FOR INTEL <i data-lucide="arrow-up-right"></i></span>
+          </div>
+        </article>
+      </div>
+
+      <!-- Testimonials (Scrolling) -->
+      <div class="testimonials-section" data-aos="fade-up" data-delay="200">
+        <h3 class="subsection-title">OPERATIVE FEEDBACK</h3>
+        <div class="testimonials-scroll horizontal-scroll snap-mandatory">
+          <div class="testimonial-card glass-panel">
+            <div class="user-profile">
+              <div class="user-avatar gradient-1">SK</div>
+              <div class="user-info">
+                <h4>SARAH K.</h4>
+                <span>Pro Gamer</span>
+              </div>
+            </div>
+            <p>"Absolute god-tier focus. No crash. Just pure wins."</p>
+            <div class="rating">★★★★★</div>
+          </div>
+          <div class="testimonial-card glass-panel">
+            <div class="user-profile">
+              <div class="user-avatar gradient-2">MX</div>
+              <div class="user-info">
+                <h4>MAX X.</h4>
+                <span>Developer</span>
+              </div>
+            </div>
+            <p>"Code compiles faster when I drink Aura. It's science."</p>
+            <div class="rating">★★★★★</div>
+          </div>
+          <div class="testimonial-card glass-panel">
+            <div class="user-profile">
+              <div class="user-avatar gradient-3">EL</div>
+              <div class="user-info">
+                <h4>ELENA L.</h4>
+                <span>Athlete</span>
+              </div>
+            </div>
+            <p>"The hydration is real. Best pre-workout I've ever used."</p>
+            <div class="rating">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ LIVE INFO MODAL ============ -->
+  <div class="live-modal" id="liveModal">
+    <div class="live-modal-backdrop" onclick="closeLiveModal()"></div>
+    <div class="live-modal-container">
+      <button class="live-modal-close" onclick="closeLiveModal()"><i data-lucide="x"></i></button>
+
+      <div class="live-modal-content-wrapper">
+        <div class="live-modal-image">
+          <img id="modalImg" src="" alt="Detail">
+          <div class="modal-gradient-overlay"></div>
+        </div>
+
+        <div class="live-modal-info">
+          <span class="modal-date" id="modalDate">DATE</span>
+          <h2 class="modal-title" id="modalTitle">TITLE</h2>
+          <div class="modal-body-text" id="modalDesc">
+            <!-- Content Injected via JS -->
+          </div>
+          <button class="btn-god full-width mt-4">INITIATE SEQUENCE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ COLLECTION SELECTION MODAL ============ -->
+  <div class="live-modal" id="collectionModal">
+    <div class="live-modal-backdrop" onclick="closeCollectionModal()"></div>
+    <div class="live-modal-container">
+      <button class="live-modal-close" onclick="closeCollectionModal()"><i data-lucide="x"></i></button>
+
+      <div class="live-modal-content-wrapper">
+        <div class="live-modal-image">
+          <img id="colModalImg" src="" alt="Detail">
+          <div class="modal-gradient-overlay"></div>
+        </div>
+
+        <div class="live-modal-info">
+          <span class="modal-date" id="colModalTag">COLLECTION</span>
+          <h2 class="modal-title" id="colModalTitle">TITLE</h2>
+          <div class="modal-body-text" id="colModalDesc">
+            <!-- Content Injected via JS -->
+          </div>
+          <button class="btn-god full-width mt-4" onclick="showToast('ADDED TO COLLECTION', 'success')">ACQUIRE
+            ASSET</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ CONTACT SECTION ============ -->
+  <section class="contact" id="contact">
+    <div class="section-bg gradient">
+      <div class="glow-orb orb-center"></div>
+    </div>
+
+    <div class="container">
+      <div class="section-header center" data-aos="fade-up">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">
+          INITIATE
+          <br>
+          <span class="gradient-text">CONTACT</span>
+        </h2>
+        <p class="section-description">
+          Join the elite. Partner with us, ask questions, or share your Aura experience.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-right">
+          <div class="info-cards">
+            <a href="mailto:connect@auracrystal.com" class="info-card glass-card">
+              <span class="info-icon"><i data-lucide="mail"></i></span>
+              <span class="info-label">Email</span>
+              <span class="info-value">connect@auracrystal.com</span>
+            </a>
+            <div class="info-card glass-card">
+              <span class="info-icon"><i data-lucide="map-pin"></i></span>
+              <span class="info-label">Headquarters</span>
+              <span class="info-value">Neo-Tokyo, Sector 7</span>
+            </div>
+            <a href="tel:+15550002872" class="info-card glass-card">
+              <span class="info-icon"><i data-lucide="phone"></i></span>
+              <span class="info-label">Phone</span>
+              <span class="info-value">+1 (555) 000-AURA</span>
+            </a>
+            <div class="info-card glass-card">
+              <span class="info-icon"><i data-lucide="clock"></i></span>
+              <span class="info-label">Support Hours</span>
+              <span class="info-value">24/7 Available</span>
+            </div>
+          </div>
+
+          <div class="social-panel glass-panel">
+            <h3>Connect With Us</h3>
+            <div class="social-grid">
+              <a href="#" class="social-link" onclick="handleSocialClick('Instagram')">
+                <span class="social-icon"><i data-lucide="instagram"></i></span>
+                <span class="social-name">Instagram</span>
+              </a>
+              <a href="#" class="social-link" onclick="handleSocialClick('Twitter')">
+                <span class="social-icon"><i data-lucide="twitter"></i></span>
+                <span class="social-name">Twitter</span>
+              </a>
+              <a href="#" class="social-link" onclick="handleSocialClick('LinkedIn')">
+                <span class="social-icon"><i data-lucide="linkedin"></i></span>
+                <span class="social-name">LinkedIn</span>
+              </a>
+              <a href="#" class="social-link" onclick="handleSocialClick('Discord')">
+                <span class="social-icon"><i data-lucide="message-circle"></i></span>
+                <span class="social-name">Discord</span>
+              </a>
+              <a href="#" class="social-link" onclick="handleSocialClick('YouTube')">
+                <span class="social-icon"><i data-lucide="youtube"></i></span>
+                <span class="social-name">YouTube</span>
+              </a>
+              <a href="#" class="social-link" onclick="handleSocialClick('TikTok')">
+                <span class="social-icon"><i data-lucide="music"></i></span>
+                <span class="social-name">TikTok</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="map-card glass-card">
+            <div class="grid-pattern"></div>
+            <div class="map-pin">
+              <span class="pin-icon"><i data-lucide="map-pin"></i></span>
+              <div class="pin-pulse"></div>
+            </div>
+            <div class="map-info">
+              <span class="map-label">Neo-Tokyo HQ</span>
+              <a href="#" class="link-arrow small" onclick="handleDirections()">Get Directions <i
+                  data-lucide="arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper" data-aos="fade-left">
+          <form class="contact-form glass-panel" id="contactForm">
+            <div class="form-header">
+              <h3>Send a Message</h3>
+              <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="John" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone (Optional)</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject">
+                <option value="general">General Inquiry</option>
+                <option value="partnership">Partnership Opportunity</option>
+                <option value="wholesale">Wholesale Orders</option>
+                <option value="press">Press & Media</option>
+                <option value="support">Customer Support</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us what's on your mind..."
+                required></textarea>
+            </div>
+
+            <button type="submit" class="btn-god full-width">
+              <span class="btn-text">Send Transmission</span>
+              <span class="btn-loading">
+                <i data-lucide="loader-2" class="spin"></i>
+                Transmitting...
+              </span>
+              <i data-lucide="send" class="btn-icon"></i>
+            </button>
+
+            <p class="form-privacy">
+              By submitting, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>.
+            </p>
+          </form>
+
+          <div class="form-success" id="formSuccess">
+            <div class="success-icon"><i data-lucide="check-circle"></i></div>
+            <h4>Transmission Sent!</h4>
+            <p>We'll respond to your message shortly.</p>
+            <button class="btn-secondary" id="sendAnother">
+              <i data-lucide="refresh-cw"></i>
+              Send Another
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="newsletter glass-panel" data-aos="fade-up">
+        <div class="newsletter-content">
+          <h3>Join the <span class="gradient-text">AURA</span> Community</h3>
+          <p>Subscribe for exclusive drops, limited editions, and early access to new flavors.</p>
+        </div>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit" class="btn-god">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-glow"></div>
+    <div class="grid-pattern"></div>
+
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">
+            <img src="https://i.pinimg.com/1200x/71/56/aa/7156aae55fcf720b70e2da274911c618.jpg"
+              class="footer-brand-logo" alt="Aura Logo">
+            AURA
+          </a>
+          <p class="footer-description">
+            The next evolution of energy. Zero sugar, zero compromise, infinite power for those who dare to transcend.
+            <br><br>
+            <span style="color: var(--primary); font-weight: 700;">EST. 2026 // NEO-TOKYO</span>
+          </p>
+          <div class="footer-social">
+            <a href="javascript:void(0)" class="social-btn" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="javascript:void(0)" class="social-btn" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+            <a href="javascript:void(0)" class="social-btn" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+            <a href="javascript:void(0)" class="social-btn" aria-label="Discord"><i
+                data-lucide="message-circle"></i></a>
+            <a href="javascript:void(0)" class="social-btn" aria-label="TikTok"><i data-lucide="music"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="#products">All Flavors</a></li>
+            <li><a href="#new-arrivals">New Arrivals</a></li>
+            <li><a href="#bundles">Elite Bundles</a></li>
+            <li><a href="#merch">Official Merch</a></li>
+            <li><a href="javascript:void(0)">Gift Cards</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About Aura</a></li>
+            <li><a href="#aura-live">The Science</a></li>
+            <li><a href="javascript:void(0)">Careers @ Aura</a></li>
+            <li><a href="javascript:void(0)">Press Room</a></li>
+            <li><a href="javascript:void(0)">Sustainability</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#contact">Contact Operatives</a></li>
+            <li><a href="javascript:void(0)">Shipping & Returns</a></li>
+            <li><a href="javascript:void(0)">Track Order</a></li>
+            <li><a href="javascript:void(0)">FAQ Database</a></li>
+            <li><a href="javascript:void(0)">Wholesale Inquiries</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">© 2026 Aura Crystal Beverages. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="javascript:void(0)">Privacy Protocol</a>
+          <a href="javascript:void(0)">Terms of Service</a>
+          <a href="javascript:void(0)">Cookie Policy</a>
+          <a href="javascript:void(0)">Refund Policy</a>
+        </div>
+        <div class="payment-methods">
+          <span>SECURED BY</span>
+          <div class="payment-icons">
+            <i data-lucide="shield-check"></i>
+            <i data-lucide="lock"></i>
+            <i data-lucide="credit-card"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-watermark">AURA</div>
+  </footer>
+
+  <!-- ============ SCROLL TO TOP ============ -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i data-lucide="arrow-up"></i>
+  </button>
+
+  <!-- ============ MODAL ============ -->
+  <div class="modal" id="modal">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-content glass-panel">
+      <button class="modal-close" id="modalClose"><i data-lucide="x"></i></button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- ============ TOAST NOTIFICATION ============ -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>
