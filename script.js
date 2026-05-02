@@ -428,9 +428,7 @@ function createProductCard(product) {
             
             <div class="product-image-wrapper" style="cursor: pointer;">
                 <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy">
-                <div class="product-image-overlay" style="background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.8) 100%);">
-                    <span class="view-details-text">CLICK FOR DETAILS</span>
-                </div>
+               
             </div>
             
             <div class="product-content">
