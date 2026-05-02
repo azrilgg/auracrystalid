@@ -363,6 +363,10 @@ function initLoader() {
 
 // ==================== NAVBAR ==================== //
 function initNavbar() {
+    const navbar = document.getElementById('navbar');
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             if (navbar) navbar.classList.add('scrolled');
@@ -372,16 +376,17 @@ function initNavbar() {
     });
 
     // Mobile menu toggle
-    if (hamburger) {
+    if (hamburger && mobileMenu) {
         hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            if (mobileMenu) mobileMenu.classList.toggle('active');
-            document.body.style.overflow = mobileMenu && mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
+            const isActive = hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active', isActive);
+            document.body.style.overflow = isActive ? 'hidden' : 'auto';
         });
     }
 
     // Close mobile menu on link click
-    document.querySelectorAll('.mobile-link').forEach(link => {
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    mobileLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (hamburger) hamburger.classList.remove('active');
             if (mobileMenu) mobileMenu.classList.remove('active');
@@ -428,7 +433,7 @@ function createProductCard(product) {
             
             <div class="product-image-wrapper" style="cursor: pointer;">
                 <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy">
-               
+                
             </div>
             
             <div class="product-content">
@@ -475,48 +480,48 @@ window.showProductDetails = function (productId) {
     ).join('');
 
     showModal(`
-        <div class="product-detail-modal" style="--glow-color: ${product.color}; --glow-color-alpha: ${product.color}40;">
-            <!-- LEFT SIDE -->
-            <div class="detail-visual-side">
-                <div class="detail-image-container">
-                    <div class="detail-bg-glow"></div>
-                    <img src="${product.image}" alt="${product.name}" class="detail-main-image">
-                </div>
-                <div class="detail-badges-floating">
-                    ${product.halal ? `<div class="god-badge halal"><i data-lucide="check-circle"></i> HALAL CERTIFIED</div>` : ''}
-                    <div class="god-badge"><i data-lucide="zap"></i> ${(product.nutritionalInfo.sugar === '0g' || product.nutritionalInfo.sugar === '0G') ? 'ZERO SUGAR' : 'LOW SUGAR'}</div>
-                </div>
-            </div>
-
-            <!-- RIGHT SIDE -->
-            <div class="detail-content-side">
-                <div class="modal-product-header">
-                    <span class="modal-series-tag">AURA CRYSTAL SERIES // 2026</span>
-                    <h2 class="modal-product-title" style="color: ${product.color};">${product.name}</h2>
-                    <div class="modal-product-subtitle">${product.tagline}</div>
-                </div>
-
-                <div class="info-grid-container">
-                    <div class="info-section">
-                        <h3>DESCRIPTION</h3>
-                        <p class="description-text">${product.description}</p>
-                    </div>
+       
 
                     <div class="info-section">
-                        <h3>ACTIVE COMPOSITION</h3>
-                        <div class="composition-list">
-                            ${compositionHtml}
+                      <h3 class="info-chart-title">TRANSMISSION ANALYSIS</h3>
+                    <div class="god-nutrition-grid">
+                        <div class="god-nutri-item chart-style">
+                            <div class="nutri-label">
+                                <span>CALORIES</span>
+                                <strong>${product.nutritionalInfo.calories}</strong>
+                            </div>
+                            <div class="nutri-bar-wrapper">
+                                <div class="nutri-bar" style="width: ${Math.min(100, product.nutritionalInfo.calories / 2)}%; background: ${product.color};"></div>
+                            </div>
+                        </div>
+                        <div class="god-nutri-item chart-style">
+                            <div class="nutri-label">
+                                <span>CARBS</span>
+                                <strong>${product.nutritionalInfo.carbs}</strong>
+                            </div>
+                            <div class="nutri-bar-wrapper">
+                                <div class="nutri-bar" style="width: ${parseInt(product.nutritionalInfo.carbs) > 0 ? 40 : 5}%; background: ${product.color}; opacity: 0.6;"></div>
+                            </div>
+                        </div>
+                        <div class="god-nutri-item chart-style">
+                            <div class="nutri-label">
+                                <span>SUGAR</span>
+                                <strong>${product.nutritionalInfo.sugar}</strong>
+                            </div>
+                            <div class="nutri-bar-wrapper">
+                                <div class="nutri-bar" style="width: ${parseInt(product.nutritionalInfo.sugar) > 0 ? 30 : 2}%; background: #FF0055;"></div>
+                            </div>
+                        </div>
+                        <div class="god-nutri-item chart-style">
+                            <div class="nutri-label">
+                                <span>PROTEIN</span>
+                                <strong>${product.nutritionalInfo.protein}</strong>
+                            </div>
+                            <div class="nutri-bar-wrapper">
+                                <div class="nutri-bar" style="width: ${parseInt(product.nutritionalInfo.protein) > 0 ? 20 : 5}%; background: #00FF88;"></div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="info-section">
-                        <h3>NUTRITIONAL MATRIX</h3>
-                        <div class="god-nutrition-grid">
-                            <div class="god-nutri-item"><span>CALORIES</span><strong>${product.nutritionalInfo.calories}</strong></div>
-                            <div class="god-nutri-item"><span>CARBS</span><strong>${product.nutritionalInfo.carbs}</strong></div>
-                            <div class="god-nutri-item"><span>SUGAR</span><strong>${product.nutritionalInfo.sugar}</strong></div>
-                            <div class="god-nutri-item"><span>PROTEIN</span><strong>${product.nutritionalInfo.protein}</strong></div>
-                        </div>
                     </div>
 
                      <div class="info-section">
@@ -879,28 +884,7 @@ function handleCheckout() {
     }, 2000);
 }
 
-// ==================== INITIALIZE ==================== //
-document.addEventListener('DOMContentLoaded', () => {
 
-    // Prevent scroll during loading
-    document.body.style.overflow = 'hidden';
-
-    initLoader();
-    initNavbar();
-    initScrollProgress();
-    initScrollTop();
-    initProducts();
-    initContactForm();
-    initScrollAnimations();
-    initSmoothScroll();
-    initParallax();
-    initButtonHandlers();
-
-    // Initialize Lucide icons
-    if (window.lucide) {
-        window.lucide.createIcons();
-    }
-});
 
 // Make functions available globally
 window.addToCart = addToCart;
